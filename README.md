@@ -1,3 +1,5 @@
 # Shopping List App Challenge
 
-This repo contains starter files for the *Shopping List App* challenge.
+This app allows a user to add, check off, and remove items from a shopping list.
+
+This app also really likes broccoli.
