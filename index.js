@@ -51,16 +51,14 @@ function main() {
     }
   });
 
-  //* Wanted to try these one with 'this', so no arrow function.
+  //* Wanted to try these with 'this', so no arrow function.
 
   $('.shopping-list').on('click', '.shopping-item-toggle', function (subm) {
-    subm.preventDefault();
     let parent = $(this).closest('li');
     $(parent).find('.shopping-item').toggleClass('shopping-item__checked');
   });
 
   $('.shopping-list').on('click', '.shopping-item-delete', function (subm) {
-    subm.preventDefault();
     let parent = $(this).closest('li');
     $(parent).remove();
   });
