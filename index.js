@@ -23,7 +23,7 @@ function main() {
     } else if (item.val()) {
       $('.shopping-list').append(`
         <li>
-          <span class="shopping-item">${item.val}</span>
+          <span class="shopping-item">${item.val()}</span>
           <div class="shopping-item-controls">
             <button class="shopping-item-toggle">
               <span class="button-label">check</span>
