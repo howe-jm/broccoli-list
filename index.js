@@ -54,13 +54,11 @@ function main() {
   //* Wanted to try these with 'this', so no arrow function.
 
   $('.shopping-list').on('click', '.shopping-item-toggle', function (subm) {
-    let parent = $(this).closest('li');
-    $(parent).find('.shopping-item').toggleClass('shopping-item__checked');
+    $($(this).closest('li')).find('.shopping-item').toggleClass('shopping-item__checked');
   });
 
   $('.shopping-list').on('click', '.shopping-item-delete', function (subm) {
-    let parent = $(this).closest('li');
-    $(parent).remove();
+    $(this).closest('li').remove();
   });
 }
 
