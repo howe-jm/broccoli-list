@@ -6,7 +6,7 @@ function main() {
   $('#js-shopping-list-form').on('submit', (subm) => {
     subm.preventDefault();
     let item = $(subm.currentTarget).find('#shopping-list-entry');
-    if (item.val() === 'broccoli'.toLowerCase()) {
+    if (item.val().toLowerCase() === 'broccoli') {
       $('.shopping-list').append(`
       <li>
         <span class="shopping-item"><span class="not-italic">🥦🥦🥦</span> BROCCOLI!!!! <span class="not-italic">🥦🥦🥦</span></span></span>
