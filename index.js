@@ -1,8 +1,8 @@
 /* global $ */
 'use strict';
 
-function main() {
-  //* Wanted to try this one with arrow functions, so no 'this'.
+//* This function stores templates and adds them to the list.
+function renderList() {
   $('#js-shopping-list-form').on('submit', (subm) => {
     subm.preventDefault();
     let item = $(subm.currentTarget).find('#shopping-list-entry');
@@ -50,16 +50,28 @@ function main() {
       item.val('');
     }
   });
+}
 
-  //* Wanted to try these with 'this', so no arrow function.
+//* This function handles toggling the checked item class.
 
+function handleToggle() {
   $('.shopping-list').on('click', '.shopping-item-toggle', function () {
     $(this).closest('li').find('.shopping-item').toggleClass('shopping-item__checked');
   });
-
+}
+//* This function handles deleting the items.
+function handleDelete() {
   $('.shopping-list').on('click', '.shopping-item-delete', function () {
     $(this).closest('li').remove();
   });
+}
+
+//* This function calls all of the other functions.
+
+function main() {
+  renderList();
+  handleToggle();
+  handleDelete();
 }
 
 $(main);
